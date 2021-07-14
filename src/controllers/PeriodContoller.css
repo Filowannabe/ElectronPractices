@@ -1,0 +1,10 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#periods {
+    height: 100vh;
+    overflow-y: auto;
+    padding: 4px;
+}
