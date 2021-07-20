@@ -20,29 +20,30 @@
             <div class="col-md-6 p-4 my-auto">
                 <div id="total">
                 </div>
-                <form id="periodForm" class="card card-body">
-                    <h3><strong>Practices</strong></h3>
-                    <div class="form-group mt-4">
+                <form id="periodForm" class="card card-body enableBlur">
+                    <h3 class="disableBlur"><strong>Practices</strong></h3>
+                    <div class="form-group mt-4 disableBlur">
                         <label for="date-in"><strong>Date in</strong></label>
                         <input type="date" id="date-in" class="form-control" autofocus required>
                     </div>
-                    <div class="form-group mt-4">
+                    <div class="form-group mt-4 disableBlur">
                         <label for="time-in"><strong>Time in</strong></label>
                         <input type="time" id="time-in" class="form-control" autofocus required>
                     </div>
-                    <div class="form-group mt-4">
+                    <div class="form-group mt-4 disableBlur">
                         <label for="time-end"><strong>Time out</strong></label>
                         <input type="time" id="time-end" class="form-control" autofocus required>
                     </div>
-                    <div class="form-group mt-4">
+                    <div class="form-group mt-4 disableBlur">
                         <label for="description"><strong>Description</strong></label>
-                        <textarea id="description" rows="3" placeholder="period's description"
+                        <textarea id="description" rows="6" cols="50"
                             class="form-control"></textarea>
                     </div>
-                    <button class="btn btn-success mt-4">
-                        Save
+                    <button class="btn btn-success mt-4 disableBlur">
+                        Save <i class="fas fa-save"></i>
                     </button>
-                    <label id="exportbtn" class="btn btn-warning mt-2">Export <i class="fas fa-file-export"></i></label>
+                    <label id="exportbtn" class="btn btn-warning mt-2 disableBlur">Export <i
+                            class="fas fa-file-export"></i></label>
                 </form>
             </div>
             <div class="col-md-6">

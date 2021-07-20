@@ -52,16 +52,16 @@ periodService.renderperiods = (periodList, containerList) => {
         const todayTime = parseInt(period.time_end) - parseInt(period.time_start);
         totalTime = totalTime + todayTime;
         containerList.innerHTML += `
-        <div class="animate__animated animate__fadeInLeft card card-body my-2 ">
+        <div class="animate__animated animate__fadeInLeft card card-body my-2 periodCards ">
             <h4><strong>Date:</strong> <strong>${period.date_start.toLocaleDateString('zh-Hans-CN')}</h4>
-            <p><strong>Time Start:</strong> <strong>${period.time_start}</strong></p>
-            <p><strong>Time end:</strong> <strong>${period.time_end}</strong></p>
+            <p><strong>Start time:</strong> <strong>${period.time_start}</strong></p>
+            <p><strong>End Time:</strong> <strong>${period.time_end}</strong></p>
             <h5><strong>Today time: ${todayTime} hours</strong></h5>
             <p>
-            <button class="btn btn-danger" onclick="periodService.deletePeriod(${period.id})">
+            <button class="btn btn-danger CardsBtn" onclick="periodService.deletePeriod(${period.id})">
             DELETE
             </button>
-            <button class="btn btn-secondary" onclick="periodService.getPeriodById('${period.id}')">
+            <button class="btn btn-secondary CardsBtn" onclick="periodService.getPeriodById('${period.id}')">
             EDIT
             </button>
             </p>
@@ -70,7 +70,7 @@ periodService.renderperiods = (periodList, containerList) => {
     });
     const totalDiv = document.getElementById('total');
     totalDiv.innerHTML = '';
-    totalDiv.innerHTML += `<h3><strong>Total time: ${totalTime} hours</strong></h3>`;
+    totalDiv.innerHTML += `<h3><strong>Actual time: ${totalTime} hours</strong></h3>`;
 }
 
 periodService.exportData = async () => {
